@@ -1,17 +1,19 @@
 import { initializeApp } from "firebase/app";
 import {getAuth} from "firebase/auth";
+import {getFirestore} from "@firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAzgv0BJoTn_-EzBD-SiD_BrofaYhO3iFQ",
-  authDomain: "piston-notes.firebaseapp.com",
-  projectId: "piston-notes",
-  storageBucket: "piston-notes.appspot.com",
-  messagingSenderId: "905295062364",
-  appId: "1:905295062364:web:788525af377bda0aab0d99",
-  measurementId: "G-D5X04Y4TV6"
-};
+  apiKey: "AIzaSyCtTP0ETXHJOo15_kAIAOjShm_cxo7_FoE",
+  authDomain: "piston-quiz.firebaseapp.com",
+  projectId: "piston-quiz",
+  storageBucket: "piston-quiz.appspot.com",
+  messagingSenderId: "58190409157",
+  appId: "1:58190409157:web:4144751306c1297a98afac",
+  measurementId: "G-NEFKXBHXXC"
+}; 
 
 
 const app = initializeApp(firebaseConfig);
+export const db=getFirestore(app);
 export const auth=getAuth(app);
 export default app;
