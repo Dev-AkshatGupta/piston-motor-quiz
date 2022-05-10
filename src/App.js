@@ -21,6 +21,12 @@ function App() {
   const createUser=async(names)=>{
     await addDoc(userCollectionRef,names);
   }
+  // This is for the edit
+  const updateUser=async (id,age)=>{
+    const userDoc=doc(db,"users",id)
+    const newFields={age:age+1}
+   await updateDoc(userDoc,newFields)
+  }
   return (
     <div className="App">
        {/* post request now for creating new users */}
