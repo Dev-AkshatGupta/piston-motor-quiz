@@ -229,11 +229,20 @@ const quizCategory = [
     },
   },
 ];
-(async function (){
-await setDoc(
-  doc(db, "CategoryOfQuiz", "HistoryOFAutomobiles"),
-  quizCategory[0]
-)})();
+const obj3 = [
+  {
+    image:
+      "https://drive.google.com/uc?export=view&id=1xiyrNvW7VKMUAMV2IkWW1TbDovCN6lwP",
+    title: "History OF Automobiles",
+    quiz: ["quiz1", "quiz2"],
+  },
+];
+(async function () {
+  await setDoc(
+    doc(db, "QuizCategory", "HistoryOFAutomobiles"),
+    obj3[0]
+  );
+})();
 
 export const auth = getAuth(app);
 export default app;
